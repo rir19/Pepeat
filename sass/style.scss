@@ -1,0 +1,15 @@
+@import "helpers/reset";
+@import "helpers/variables";
+@import "helpers/typo";
+
+@import "components/nav";
+@import "components/footer";
+@import "components/accueil";
+@import "components/concept";
+@import "components/nous";
+@import "components/faq";
+@import "components/mention";
+
+body{
+    background-image: url("/Pepeat/images/arrière-plan.png");
+}

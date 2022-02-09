@@ -1,0 +1,338 @@
+#header2{
+    height: 100vh;
+
+    .head2{
+        background: url("/Pepeat/images/img-concept.png") center no-repeat;
+        background-size: cover;
+        height: 100%;
+
+        section{
+            padding: 10% 5%;
+
+            h1{
+                line-height: 56px;
+                margin: 15px 0px;
+            }
+
+            h3{
+                color: $blanc;
+                margin-bottom: 15px;
+            }
+
+            p{
+                @extend %typo_titre;
+                color: $blanc;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+
+#concept{
+    margin-top: 5%;
+
+    h3{
+        color: $gris;
+    }
+
+    .part1{
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 10%;
+        align-items: center;
+
+        .nature{
+            width: 95%;
+        }
+
+        .texte{
+
+            width: 45%;
+
+            h2{
+                color: $marron;
+                line-height: 30px;
+                margin: 8px 0; 
+            }
+    
+            p{
+                font-family: $open_sans;
+                color: $gris_paragraphe;
+            }
+
+            img{
+                margin: 12px 0 30px 0;
+            }
+        }
+    }
+
+
+    .part2{
+        background-color: $vert;
+        padding: 5% 10%;
+        margin-bottom: 5%;
+
+        h2{
+            text-align: center;
+            color: $blanc;
+        }
+
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .utilisation{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+            article{
+                margin: 5px 20px;
+                padding: 0 10px;
+                width: 20%;
+
+                p{
+                    text-align: center;
+                    font-family: $open_sans;
+                    color: $blanc;
+                    font-size: 18px;
+                }
+
+                img{
+                    margin-bottom: 10px;
+                    width: 65%;
+                }
+            }
+        }
+    }
+
+
+    .part3{
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 10%;
+        align-items: center;
+
+        .mockup{
+            width: 100%;
+        }
+
+        .texte{
+            padding-left: 2%;
+
+            h2{
+                color: $marron;
+                line-height: 30px;
+                margin: 8px 0; 
+            }
+    
+            p{
+                font-family: $open_sans;
+                color: $gris_paragraphe;
+            }
+
+            ul{
+                margin: 20px 0;
+
+                li{
+                    margin: 10px 0 10px 20px;
+                    font-family: $open_sans;
+                    color: $gris_paragraphe;
+                }
+            }
+
+            img{
+                margin: 12px 0 30px 0;
+            }
+        }
+    }
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width : 768px){
+    #header2 .head2 section {
+        padding: 26% 5%;
+    }
+    #concept .part2 .utilisation article {
+        width: 35%;
+        img {
+            width: 53%;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width : 1100px) {
+    #header2 {
+
+        .head2 section {
+            padding: 18% 5%;
+        }
+    }
+}
+
+@media screen and (max-width : 1024px){
+    #header2 .head2 section {
+        padding: 10% 5%;
+    }
+    #concept .part1{
+        padding: 0 5%;
+
+        .texte {
+            width: 60%;
+        }
+    }
+    #concept .part2 {
+        padding: 5% 5% 8%;
+    }
+    #concept .part3{
+        padding: 0 5%;
+        .texte ul li {
+            margin: 5px 0 5px 20px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width : 925px) {
+    #concept .part1 .texte {
+        width: 75%;
+    }
+    #concept .part2 .utilisation article {
+        width: 25%;
+        img{
+            width: 60%;
+        }
+    }
+}
+
+
+@media screen and (max-width : 576px){
+    #header2 .head2 section {
+        padding: 22% 5%;
+        ul li {
+            margin: 5px 30px;
+            font-size: 14px;
+        }
+        h1{
+            line-height: 40px;
+        }
+    }
+    .feuille{
+        width: 95px;
+    }
+    #concept .part1{
+        flex-direction: column;
+        align-items: center;
+        .nature{
+            margin-left: 45px;
+        }
+        .texte{
+            img {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    #concept .part2 .utilisation article {
+        width: 35%;
+    }
+    #concept .part3{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+        .texte {
+            margin-top: 20px;
+            ul {
+                margin: 13px 0;
+            }
+            img {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+        }
+        .mockup {
+            width: 75%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+}
+@media screen and (max-width : 425px) {
+    #concept .part1{
+        margin-bottom: 10%;
+        .texte {
+            width: 95%;
+            img {
+                margin-top: 0px;
+            }
+        }
+    }
+    #concept .part2{
+        img {
+            margin-top: 8px;
+            margin-bottom: 0px;
+        }
+        h2{
+            margin: 12px 0px 10px;
+        }
+        .utilisation article {
+            width: 80%;
+            img {
+                width: 120px;
+                margin-top: 12px;
+            }
+        }
+    }
+    #concept .part3 .texte{
+        img {
+            margin-top: 0px;
+        }
+        ul li {
+        margin: 5px 0 5px 20px;
+        font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width : 375px) {
+    #concept .part1 .nature {
+        margin-left: 42px;
+        width: 80%;
+    }
+    #concept .part1 .texte h2 {
+        line-height: 21px;
+    }
+    #concept .part3 .texte h2 {
+        line-height: 21px;
+    }
+    #concept .part2 .utilisation article img {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width : 320px) {
+    #header2 .head2 section {
+        padding: 26% 5%;
+        ul li {
+            font-size: 13px;
+        }
+    }
+    #accueil .part2 .services article img {
+        width: 45%;
+    }
+}

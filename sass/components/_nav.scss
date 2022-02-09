@@ -1,0 +1,139 @@
+
+#barre_nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: $blanc;
+    position: fixed;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+}
+
+.logo{
+    margin-right: auto;
+    height: 80%;
+}
+
+.logo img{
+    width: 55px;
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+}
+
+.nav_links a, 
+.cta, 
+.overlay__content a{
+    @extend %typo_titre;
+    font-weight: 700;
+    color: $vert;
+    text-decoration: none;
+}
+
+.nav_links li{
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #838625 ;
+}
+
+.cta{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: $vert;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: $blanc;
+}
+
+.cta:hover{
+    background-color: #838625;
+}
+
+
+/* Menu format mobile */
+
+.menu{
+    display: none;
+}
+
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: $vert;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay--active{
+    width: 100%;
+}
+
+.overlay__content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    color: $blanc;
+}
+
+.overlay a:hover,
+.overlay a:focus{
+    color: #e2e2e2;
+}
+
+.overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+    color: $blanc;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVES */
+
+@media screen and (max-height : 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close{
+        font-size: 30px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .nav_links,
+    .cta {
+        display: none;
+    }
+    .menu{
+        display: initial;
+    }
+}

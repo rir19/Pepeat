@@ -1,0 +1,38 @@
+#mention{
+    padding: 0% 10%;
+
+    h1{
+        margin-top: 5%;
+        color: $vert;
+        margin-bottom: 25px;
+    }
+
+    h2{
+        margin: 30px 0px 10px;
+        color: $marron;
+    }
+
+    h3 {
+        font-weight: 500;
+        margin: 5px 10px;
+    }
+
+    h4{
+        color: $gris_paragraphe;
+        font-size: 15px;
+        font-family: $open_sans;
+    }
+    
+    p{
+        font-family: $open_sans;
+        font-size: 13px;
+        color: $gris_paragraphe;
+    }
+
+    li{
+        font-family: $open_sans;
+        font-size: 13px;
+        color: $gris_paragraphe;
+        margin-left: 15px;
+    }
+}

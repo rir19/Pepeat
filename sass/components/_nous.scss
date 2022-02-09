@@ -1,0 +1,271 @@
+#header3{
+    height: 100vh;
+
+    .head3{
+        background: url("/Pepeat/images/img-qui_sommes_nous.png") center no-repeat;
+        background-size: cover;
+        height: 100%;
+
+        section{
+            padding: 10% 5%;
+
+            h1{
+                line-height: 56px;
+                margin: 15px 0px;
+            }
+
+            h3{
+                color: $blanc;
+                margin-bottom: 15px;
+            }
+
+            p{
+                @extend %typo_titre;
+                color: $blanc;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+
+#nous{
+    margin-top: 5%;
+    
+    .part1{
+        margin-bottom: 5%;
+        text-align: center;
+        padding: 0 10%;
+    
+        h2{
+            color: $marron;
+        }
+
+        h3{
+            color: $gris;
+        }
+
+        h4{
+            color: $gris_paragraphe;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        
+        p{
+            font-weight: 300;
+        }
+
+        .feuille{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .equipe{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 45px;
+            
+            article{
+                text-align: center;
+                font-family: $open_sans;
+                color: $gris_paragraphe;
+                margin: 5px 20px;
+                padding: 0 10px;
+                width: 25%;
+
+                img{
+                    width: 80%;
+                }
+
+                hr{
+                    width: 15%;
+                    margin: auto;
+                    border: 1px solid $gris_paragraphe;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+
+                }
+            }
+        }
+    }
+
+
+    .part2{
+        margin-bottom: 5%;
+        padding: 5% 0 0;
+        text-align: center;
+    
+        h2{
+            color: $marron;
+        }
+
+        h3{
+            color: $gris;
+        }
+
+        .histoire{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+
+            .description{
+                width: 40%;
+                margin: 0 20px;
+
+                p{
+                    font-family: $open_sans;
+                    color: $gris_paragraphe;
+                    text-align: left;
+                }
+            }
+
+            .photo{
+                width: 60%;
+
+                img{
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width : 1100px) {
+    #header3 {
+
+        .head3 section {
+            padding: 18% 5%;
+        }
+    }
+}
+
+@media screen and (max-width : 1024px){
+    #header3 .head3 section {
+        padding: 10% 5%;
+    }
+    #nous .part1{
+        padding: 0 5%;
+    }
+    #nous .part2 .histoire .description{
+        margin: 0 20px 0 10px;
+        p{
+            font-size: 12px;
+        }
+    } 
+
+    
+}
+
+@media screen and (max-width : 768px){
+    #header3 .head3 section {
+        padding: 26% 5%;
+    }
+    #nous .part1{
+        margin-bottom: 3%;
+        .equipe{
+            flex-wrap: wrap;
+            margin-top: 20px;
+            article{
+                width: 40%;
+                margin: 5px 10px 20px;
+                img {
+                    width: 45%;
+                }
+            }
+        }
+    } 
+    #nous .part2 .histoire{
+        flex-wrap: wrap;
+        .description{
+            padding: 0 5%;
+            width: 100%;
+            p{
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+        .photo{
+            width: 100%;
+        }
+    }
+    
+}
+
+@media screen and (max-width : 576px){
+    #header3 .head3 section {
+        padding: 22% 5%;
+        ul li {
+            margin: 5px 30px;
+            font-size: 14px;
+        }
+        h1{
+            line-height: 40px;
+        }
+    }
+    #nous .part1{
+        .feuille {
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        h2{
+            margin: 10px 0px 5px;
+        }
+
+    } 
+    .feuille{
+        width: 95px;
+    }
+    #nous .part2{
+        h2{
+            margin: 10px 0px 5px;
+        }
+        .histoire{
+            margin-top: 12px;
+        }
+    }
+}
+@media screen and (max-width : 425px) {
+    #nous .part1 .equipe article {
+        width: 80%;
+        img{
+            width: 35%;
+        }
+        h4{
+            margin-top: 2px;
+        }
+        hr{
+            margin-top: 7px;
+            margin-bottom: 8px;
+        }
+    }
+    #nous .part2 {
+        margin-bottom: 10%;
+    }
+    #nous .part2 .histoire .description{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width : 375px) {
+    
+}
+
+@media screen and (max-width : 320px) {
+    #header3 .head3 section {
+        padding: 26% 5%;
+        ul li {
+            font-size: 13px;
+        }
+    }
+    
+}
